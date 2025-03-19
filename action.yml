@@ -63,7 +63,7 @@ runs:
       if: ${{ inputs.dockerfile-path != '' }}
       uses: actions/checkout@v4
       with:
-        repository: ${{ inputs.dockerfiles-repository || 'vs-tkn/docker-action' }}
+        repository: ${{ inputs.dockerfiles-repository || 'VS-TKN/docker-action' }}
         path: .dockerfiles-repository
 
     - name: "Set the Dockerfile"
@@ -113,7 +113,7 @@ runs:
 
     - name: "Run vulnerability analysis"
       if: ${{ inputs.vulnerability-analysis == 'true' }}
-      uses: vs-tkn/vulnerability-analysis-action@main
+      uses: VS-TKN/vulnerability-analysis-action@main
       with:
         scan-type: image
         scan-ref: ${{ steps.image.outputs.image }}
