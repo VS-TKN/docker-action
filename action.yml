@@ -63,7 +63,7 @@ runs:
       if: ${{ inputs.dockerfile-path != '' }}
       uses: actions/checkout@v4
       with:
-        repository: ${{ inputs.dockerfiles-repository || 'phorus-group/docker-action' }}
+        repository: ${{ inputs.dockerfiles-repository || 'vs-tkn/docker-action' }}
         path: .dockerfiles-repository
 
     - name: "Set the Dockerfile"
