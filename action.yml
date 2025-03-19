@@ -113,7 +113,7 @@ runs:
 
     - name: "Run vulnerability analysis"
       if: ${{ inputs.vulnerability-analysis == 'true' }}
-      uses: phorus-group/vulnerability-analysis-action@main
+      uses: vs-tkn/vulnerability-analysis-action@main
       with:
         scan-type: image
         scan-ref: ${{ steps.image.outputs.image }}
